@@ -2,11 +2,11 @@ import math
 import numpy
 
 list_of_primes = []
-for num in range(2, 20):
+for num in range(2, 50000):
     if all(num % i != 0 for i in range(2, int(math.sqrt(num)) + 1)):
         list_of_primes.append(num)
         # print(num)
-
+print(list_of_primes)
 for j in range(len(list_of_primes)):
     # print(j)
     print(list_of_primes[:j + 1])
@@ -20,7 +20,7 @@ for j in range(len(list_of_primes)):
     else:
         divisors = []
         # What to check to whihc number these numbers are divisble by
-        
+
         for i in range(2, number_to_check):
             if (number_to_check % i == 0):
                 divisors.append(i)
